@@ -6,13 +6,11 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Odoo for Outlook"/>
   <Description DefaultValue="Odoo for Outlook."/>
-  <IconUrl DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/outlook/dist/assets/odoo-64.png"/>
-  <HighResolutionIconUrl DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/outlook/dist/assets/odoo-128.png"/>
+  <IconUrl DefaultValue="https://portal.valab.com/assets/odoo-64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://portal.valab.com/assets/odoo-128.png"/>
   <SupportUrl DefaultValue="https://www.odoo.com/help"/>
   <AppDomains>
-    <AppDomain>https://wn-valab.github.io</AppDomain>
-    <AppDomain>https://wn-valab.github.io/plugin_odoo_outlook</AppDomain>
-    <AppDomain>https://wn-valab.github.io/plugin_odoo_outlook/outlook</AppDomain>
+    <AppDomain>https://portal.valab.com</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Mailbox"/>
@@ -25,7 +23,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/outlook/dist/taskpane.html"/>
+        <SourceLocation DefaultValue="https://portal.valab.com/taskpane.html"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -74,14 +72,14 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/outlook/dist/assets/odoo-16.png"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/outlook/dist/assets/odoo-32.png"/>
-        <bt:Image id="Icon.64x64" DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/outlook/dist/assets/odoo-64.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/outlook/dist/assets/odoo-80.png"/>
-        <bt:Image id="Icon.128x128" DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/outlook/dist/assets/odoo-128.png"/>
+        <bt:Image id="Icon.16x16" DefaultValue="https://portal.valab.com/assets/odoo-16.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://portal.valab.com/assets/odoo-32.png"/>
+        <bt:Image id="Icon.64x64" DefaultValue="https://portal.valab.com/assets/odoo-64.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://portal.valab.com/assets/odoo-80.png"/>
+        <bt:Image id="Icon.128x128" DefaultValue="https://portal.valab.com/assets/odoo-128.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/outlook/dist/taskpane.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://portal.valab.com/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GroupLabel" DefaultValue="Odoo for Outlook"/>
@@ -131,14 +129,14 @@
       </Hosts>
       <Resources>
         <bt:Images>
-          <bt:Image id="Icon.16x16" DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/outlook/dist/assets/odoo-16.png"/>
-          <bt:Image id="Icon.32x32" DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/outlook/dist/assets/odoo-32.png"/>
-          <bt:Image id="Icon.64x64" DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/outlook/dist/assets/odoo-64.png"/>
-          <bt:Image id="Icon.80x80" DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/outlook/dist/assets/odoo-80.png"/>
-          <bt:Image id="Icon.128x128" DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/outlook/dist/assets/odoo-128.png"/>
+          <bt:Image id="Icon.16x16" DefaultValue="https://portal.valab.com/assets/odoo-16.png"/>
+          <bt:Image id="Icon.32x32" DefaultValue="https://portal.valab.com/assets/odoo-32.png"/>
+          <bt:Image id="Icon.64x64" DefaultValue="https://portal.valab.com/assets/odoo-64.png"/>
+          <bt:Image id="Icon.80x80" DefaultValue="https://portal.valab.com/assets/odoo-80.png"/>
+          <bt:Image id="Icon.128x128" DefaultValue="https://portal.valab.com/assets/odoo-128.png"/>
         </bt:Images>
         <bt:Urls>
-          <bt:Url id="Taskpane.Url" DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/outlook/dist/taskpane.html"/>
+          <bt:Url id="Taskpane.Url" DefaultValue="https://portal.valab.com/taskpane.html"/>
         </bt:Urls>
         <bt:ShortStrings>
           <bt:String id="GroupLabel" DefaultValue="Odoo for Outlook"/>
