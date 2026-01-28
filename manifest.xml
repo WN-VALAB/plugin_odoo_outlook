@@ -3,7 +3,6 @@
   xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
-  xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
   xsi:type="MailApp">
 
   <Id>c5549a21-aefb-4ba8-ae7c-b77bceab4023</Id>
@@ -14,15 +13,6 @@
 
   <DisplayName DefaultValue="Odoo for Outlook"/>
   <Description DefaultValue="Odoo for Outlook."/>
-  <SupportUrl DefaultValue="https://www.odoo.com/help"/>
-
-  <IconUrl DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/assets/odoo-64.png"/>
-  <HighResolutionIconUrl DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/assets/odoo-128.png"/>
-
-  <AppDomains>
-    <AppDomain>https://wn-valab.github.io</AppDomain>
-    <AppDomain>https://portal.valab.com</AppDomain>
-  </AppDomains>
 
   <Hosts>
     <Host Name="Mailbox"/>
@@ -50,6 +40,15 @@
   </Rule>
 
   <DisableEntityHighlighting>false</DisableEntityHighlighting>
+
+  <IconUrl DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/assets/odoo-64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/assets/odoo-128.png"/>
+  <SupportUrl DefaultValue="https://www.odoo.com/help"/>
+
+  <AppDomains>
+    <AppDomain>https://wn-valab.github.io</AppDomain>
+    <AppDomain>https://portal.valab.com</AppDomain>
+  </AppDomains>
 
   <VersionOverrides
     xmlns="http://schemas.microsoft.com/office/mailappversionoverrides"
@@ -95,7 +94,6 @@
     </Hosts>
 
     <Resources>
-
       <bt:Images>
         <bt:Image id="Icon.16x16" DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/assets/odoo-16.png"/>
         <bt:Image id="Icon.32x32" DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/assets/odoo-32.png"/>
@@ -116,8 +114,8 @@
       <bt:LongStrings>
         <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Open Odoo integration pane"/>
       </bt:LongStrings>
-
     </Resources>
+
   </VersionOverrides>
 
 </OfficeApp>
