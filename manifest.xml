@@ -52,22 +52,22 @@
   </Rule>
   
   <DisableEntityHighlighting>false</DisableEntityHighlighting>
-  
-  <!-- ============ DOMAINES AUTORISÉS ============ -->
-  <AppDomains>
-    <AppDomain>https://wn-valab.github.io</AppDomain>
-    <AppDomain>https://portal.valab.com</AppDomain>
-  </AppDomains>
 
   <!-- ============ VERSION OVERRIDES ============ -->
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" xsi:type="VersionOverridesV1_0">
+    
+    <!-- DOMAINES AUTORISÉS (DOIT ÊTRE ICI, pas avant VersionOverrides) -->
+    <AppDomains>
+      <AppDomain>https://wn-valab.github.io</AppDomain>
+      <AppDomain>https://portal.valab.com</AppDomain>
+    </AppDomains>
     
     <Hosts>
       <Host xsi:type="MailHost">
         
         <DesktopFormFactor>
           
-          <!-- Créez un fichier commands.html simple si nécessaire -->
+          <!-- Fichier de fonctions -->
           <FunctionFile resid="CommandsUrl"/>
           
           <!-- BOUTON EN MODE LECTURE -->
@@ -136,7 +136,7 @@
     <!-- ============ RESSOURCES ============ -->
     <Resources>
       
-      <!-- ICÔNES (toutes vérifiées) -->
+      <!-- ICÔNES -->
       <bt:Images>
         <bt:Image id="OdooIcon16" DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/assets/odoo-16.png"/>
         <bt:Image id="OdooIcon32" DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/assets/odoo-32.png"/>
