@@ -8,7 +8,7 @@
 
   <!-- ============ IDENTIFICATION ============ -->
   <Id>c5549a21-aefb-4ba8-ae7c-b77bceab4023</Id>
-  <Version>2.0.3</Version>
+  <Version>2.0.4</Version>
   <ProviderName>VALAB</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   
@@ -35,7 +35,7 @@
     <Form xsi:type="ItemRead">
       <DesktopSettings>
         <SourceLocation DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/taskpane.html"/>
-        <RequestedHeight>450</RequestedHeight>
+        <RequestedHeight>500</RequestedHeight>
       </DesktopSettings>
     </Form>
   </FormSettings>
@@ -54,9 +54,9 @@
   <DisableEntityHighlighting>false</DisableEntityHighlighting>
 
   <!-- ============ VERSION OVERRIDES ============ -->
-  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" xsi:type="VersionOverridesV1_0">
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
     
-    <!-- DOMAINES AUTORISÉS (DOIT ÊTRE ICI, pas avant VersionOverrides) -->
+    <!-- DOMAINES AUTORISÉS -->
     <AppDomains>
       <AppDomain>https://wn-valab.github.io</AppDomain>
       <AppDomain>https://portal.valab.com</AppDomain>
@@ -70,12 +70,13 @@
           <!-- Fichier de fonctions -->
           <FunctionFile resid="CommandsUrl"/>
           
-          <!-- BOUTON EN MODE LECTURE -->
+          <!-- ============ BOUTON EN MODE LECTURE ============ -->
           <ExtensionPoint xsi:type="MessageReadCommandSurface">
             <OfficeTab id="TabDefault">
-              <Group id="OdooGroupRead" resid="OdooGroup">
+              <Group id="OdooGroupRead" resid="OdooGroupId">
                 <Label resid="OdooGroupLabel"/>
                 
+                <!-- Bouton principal -->
                 <Control xsi:type="Button" id="OpenOdooPaneButtonRead">
                   <Label resid="OpenOdooButtonLabel"/>
                   <Supertip>
@@ -99,13 +100,42 @@
             </OfficeTab>
           </ExtensionPoint>
           
-          <!-- BOUTON EN MODE ÉCRITURE -->
+          <!-- ============ BOUTON EN MODE ÉCRITURE ============ -->
           <ExtensionPoint xsi:type="MessageComposeCommandSurface">
             <OfficeTab id="TabDefault">
-              <Group id="OdooGroupCompose" resid="OdooGroup">
+              <Group id="OdooGroupCompose" resid="OdooGroupId">
                 <Label resid="OdooGroupLabel"/>
                 
                 <Control xsi:type="Button" id="OpenOdooPaneButtonCompose">
+                  <Label resid="OpenOdooButtonLabel"/>
+                  <Supertip>
+                    <Title resid="OpenOdooButtonTitle"/>
+                    <Description resid="OpenOdooButtonDescription"/>
+                  </Supertip>
+                  
+                  <Icon>
+                    <bt:Image size="16" resid="OdooIcon16"/>
+                    <bt:Image size="32" resid="OdooIcon32"/>
+                    <bt:Image size="80" resid="OdooIcon80"/>
+                  </Icon>
+                  
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="TaskpaneUrl"/>
+                    <SupportsPinning>true</SupportsPinning>
+                  </Action>
+                </Control>
+                
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+          
+          <!-- ============ BOUTON POUR RENDEZ-VOUS ============ -->
+          <ExtensionPoint xsi:type="AppointmentAttendeeCommandSurface">
+            <OfficeTab id="TabDefault">
+              <Group id="OdooGroupAppointment" resid="OdooGroupId">
+                <Label resid="OdooGroupLabel"/>
+                
+                <Control xsi:type="Button" id="OpenOdooPaneButtonAppointment">
                   <Label resid="OpenOdooButtonLabel"/>
                   <Supertip>
                     <Title resid="OpenOdooButtonTitle"/>
@@ -136,7 +166,7 @@
     <!-- ============ RESSOURCES ============ -->
     <Resources>
       
-      <!-- ICÔNES -->
+      <!-- ============ TOUTES LES ICÔNES ============ -->
       <bt:Images>
         <bt:Image id="OdooIcon16" DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/assets/odoo-16.png"/>
         <bt:Image id="OdooIcon32" DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/assets/odoo-32.png"/>
@@ -145,23 +175,23 @@
         <bt:Image id="OdooIcon128" DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/assets/odoo-128.png"/>
       </bt:Images>
       
-      <!-- URLs -->
+      <!-- ============ URLs ============ -->
       <bt:Urls>
         <bt:Url id="TaskpaneUrl" DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/taskpane.html"/>
         <bt:Url id="CommandsUrl" DefaultValue="https://wn-valab.github.io/plugin_odoo_outlook/commands.html"/>
       </bt:Urls>
       
-      <!-- TEXTES COURTS -->
+      <!-- ============ TEXTES COURTS ============ -->
       <bt:ShortStrings>
-        <bt:String id="OdooGroup" DefaultValue="OdooGroup"/>
+        <bt:String id="OdooGroupId" DefaultValue="OdooGroup"/>
         <bt:String id="OdooGroupLabel" DefaultValue="Odoo"/>
         <bt:String id="OpenOdooButtonLabel" DefaultValue="Open Odoo"/>
         <bt:String id="OpenOdooButtonTitle" DefaultValue="Open Odoo Panel"/>
       </bt:ShortStrings>
       
-      <!-- TEXTES LONGS -->
+      <!-- ============ TEXTES LONGS ============ -->
       <bt:LongStrings>
-        <bt:String id="OpenOdooButtonDescription" DefaultValue="Open the Odoo integration panel to manage your Odoo data directly from Outlook"/>
+        <bt:String id="OpenOdooButtonDescription" DefaultValue="Open the Odoo integration panel to sync contacts, emails, and calendar events between Odoo and Outlook"/>
       </bt:LongStrings>
       
     </Resources>
