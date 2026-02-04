@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Odoo Commands</title>
+</head>
+<body>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <script>
+        Office.initialize = function () {
+            // Initialisation des commandes
+        };
+        
+        // Fonctions globales pour les commandes
+        function actionOpenOdoo(event) {
+            Office.context.ui.displayDialogAsync(
+                'https://wn-valab.github.io/plugin_odoo_outlook/taskpane.html',
+                { height: 60, width: 30 },
+                function (asyncResult) {
+                    if (asyncResult.status === Office.AsyncResultStatus.Failed) {
+                        console.error(asyncResult.error.message);
+                    }
+                }
+            );
+            event.completed();
+        }
+    </script>
+</body>
+</html>
